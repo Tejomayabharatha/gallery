@@ -20,7 +20,7 @@ WORKDIR /app
 COPY --from=build /app/target/gallery-0.0.1-SNAPSHOT.jar app.jar
 
 # Step 8: Expose the port (default 8080)
-EXPOSE 8989
+EXPOSE 8080
 
 # Step 9: Run the Spring Boot application
 ENTRYPOINT ["java", "-jar", "app.jar"]
