@@ -5,8 +5,8 @@ FROM openjdk:17-jdk-alpine
 WORKDIR /app
 
 # Step 3: Copy the JAR file into the container
-# Replace 'sql-queries-0.0.1-SNAPSHOT.jar' with your actual JAR file name
-COPY target/gallery-0.0.1-SNAPSHOT.jar
+# Provide both source and destination
+COPY target/gallery-0.0.1-SNAPSHOT.jar app.jar
 
 # Step 4: Expose the port that the Spring Boot application will run on (default is 8080)
 EXPOSE 8080
