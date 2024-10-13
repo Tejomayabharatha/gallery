@@ -137,4 +137,15 @@ public class ImageController {
             return new ResponseEntity<>("Given record id not found",HttpStatus.NOT_FOUND); // Return 404 if image not found
         }
     }
+
+    @DeleteMapping("/deleteCategoryById/{id}")
+    public ResponseEntity<String> deleteCategory(@PathVariable Long id){
+        try {
+            imageService.deleteCategory(id);// Call the service method to delete the image
+            return new ResponseEntity<>("deleted successfully",HttpStatus.OK); // Return 204 No Content
+        } catch (ImageNotFoundException e) {
+            return new ResponseEntity<>("Given record id not found",HttpStatus.NOT_FOUND); // Return 404 if image not found
+        }
+
+    }
 }

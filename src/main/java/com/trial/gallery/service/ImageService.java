@@ -41,6 +41,8 @@ public interface ImageService {
 
     List<ImageResponseDto> downloadImagesByCategoryAndId(String categoryName);
 
+    void deleteCategory(Long id);
+
 
 }
 

@@ -149,8 +149,10 @@ public class ImageServiceImpl implements ImageService {
                 .collect(Collectors.toList());
     }
 
-
-
+    @Override
+    public void deleteCategory(Long id) {
+        categoryRepository.deleteById(id);
+    }
 
 
 }
