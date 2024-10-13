@@ -22,7 +22,7 @@ public class GalleryApplication {
 		CorsConfiguration configuration=new CorsConfiguration();
 		configuration.setAllowCredentials(true);
 		configuration.addAllowedHeader("*");
-		configuration.addAllowedOrigin("http://localhost:3000");
+		configuration.addAllowedOrigin("https://tejomayabharatha.org/");
 		configuration.addAllowedMethod("*");
 		src.registerCorsConfiguration("/**",configuration);
 		return new CorsFilter(src);
